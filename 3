@@ -1,0 +1,34 @@
+funcao ehPrimo(num : inteiro) : logico
+
+var
+  i : inteiro
+  
+inicio
+  se num < 2 entao
+    retorne falso
+  fimse
+  
+  para i de 2 ate (num-1) faca
+    se num mod i = 0 entao
+      retorne falso
+    fimse
+  fimpara
+  
+  retorne verdadeiro
+fimfuncao
+
+algoritmo "Verificar se um número é primo"
+
+var
+  num : inteiro
+  
+inicio
+  escreva("Digite um número inteiro: ")
+  leia(num)
+  
+  se ehPrimo(num) entao
+    escreva(num, " é primo")
+  senao
+    escreva(num, " não é primo")
+  fimse
+fimalgoritmo

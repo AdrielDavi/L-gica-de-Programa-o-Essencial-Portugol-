@@ -1,0 +1,29 @@
+algoritmo "Bubble Sort"
+
+var
+  vetor : vetor[1..10] de inteiro
+  i, j, temp : inteiro
+  
+inicio
+  // leitura dos valores do vetor
+  para i de 1 ate 10 faca
+    escreva("Digite o valor do elemento ", i, ": ")
+    leia(vetor[i])
+  fimpara
+  
+  // algoritmo Bubble Sort
+  para i de 1 ate 9 faca
+    para j de i+1 ate 10 faca
+      se vetor[i] > vetor[j] entao
+        temp <- vetor[i]
+        vetor[i] <- vetor[j]
+        vetor[j] <- temp
+      fimse
+    fimpara
+  fimpara
+  
+  // exibição do vetor ordenado
+  para i de 1 ate 10 faca
+    escreva(vetor[i], " ")
+  fimpara
+fimalgoritmo

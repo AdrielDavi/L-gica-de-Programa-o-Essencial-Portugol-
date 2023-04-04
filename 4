@@ -1,0 +1,21 @@
+funcao buscaBinaria(vetor : vetor[1..10] de inteiro, inicio, fim, valor : inteiro) : inteiro
+
+var
+  meio : inteiro
+  
+inicio
+  se inicio > fim entao
+    retorne -1
+  fimse
+  
+  meio <- (inicio + fim) div 2
+  
+  se vetor[meio] = valor entao
+    retorne meio
+  senao
+    se valor < vetor[meio] entao
+      retorne buscaBinaria(vetor, inicio, meio-1, valor)
+    senao
+      retorne buscaBinaria(vetor, meio+1, fim, valor)
+    fimse
+  fimse

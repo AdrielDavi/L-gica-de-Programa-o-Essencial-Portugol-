@@ -1,0 +1,27 @@
+funcao fatorial(n : inteiro) : inteiro
+
+var
+  fat : inteiro
+  
+inicio
+  se n <= 1 entao
+    fat <- 1
+  senao
+    fat <- n * fatorial(n-1)
+  fimse
+  retorne fat
+fimfuncao
+
+algoritmo "Fatorial"
+
+var
+  num, fat : inteiro
+  
+inicio
+  escreva("Digite um número inteiro: ")
+  leia(num)
+  
+  fat <- fatorial(num)
+  
+  escreva("O fatorial de ", num, " é ", fat)
+fimalgoritmo
